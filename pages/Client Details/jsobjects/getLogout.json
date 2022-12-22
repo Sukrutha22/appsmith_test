@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "getLogout",
+    "pageId": "Client Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\t\tlogout: async() => {\n\t\t\n\t\tawait storeValue('jwt',undefined);\n\t\tawait storeValue('tabValue',\"Login\");\t\t\n\t\tawait storeValue('id',undefined);\n\t\tawait storeValue('cust_id',undefined);\n\t\t\t\n\t\tawait navigateTo('Client Details',{});\n\t\tawait storeValue('dataArray',undefined);\n\t\tawait resetWidget('login_form',true);\n\t\tawait showAlert(\"Logged out successfully\",'success');\n\t}\n\t\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Client Details_getLogout",
+  "deleted": false,
+  "gitSyncId": "639c63b486d2c75bdb0dbc44_639c809d86d2c75bdb0dbc8c"
+}

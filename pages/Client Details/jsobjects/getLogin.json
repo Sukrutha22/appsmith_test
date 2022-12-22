@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "getLogin",
+    "pageId": "Client Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tuser_login: () => {\n\t\tlogin_api.run(()=>{\n\t\t\tconst jwt = login_api?.data?.access_token;\n\t\t\tif(jwt){\n\t\t\t\tstoreValue('jwt',jwt);\n\t\t\t\tget_userinfo.run(()=>{\n\t\t\t\t\tstoreValue('tabValue', 'BobData');\n\t\t\t\t\tresetWidget('LoginForm', true);\n\t\t\t\t\tnavigateTo('Client Details',{})\t;\n\t\t\t\t\tshowAlert(\"Logged in successfully\",'success');\n\t\t\t\t\tfetch_customer.run(() => {}, ()=>{ showAlert(\"Database connection timeout !!\",'error'); })\n\t\t\t\t});\n\t\t\t}\n\t\t}, ()=>{\n\t\t\tshowAlert('Incorrect Username/Password','error');\n\t\t})\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Client Details_getLogin",
+  "deleted": false,
+  "gitSyncId": "639c63b486d2c75bdb0dbc44_639c716886d2c75bdb0dbc7c"
+}

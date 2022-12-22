@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "get_client",
+    "pageId": "Client Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tget_client: (type) => {\n\t\tif(type == 'new') storeValue(\"cust_id\", clientName.selectedOptionValue)\n\t\telse storeValue(\"cust_id\", \" \")\n\t\tget_client_id.run(()=>{}, ()=>{\n\t\t\tshowAlert('No such Customer in list', 'error')\n\t\t})\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Client Details_get_client",
+  "deleted": false,
+  "gitSyncId": "639c63b486d2c75bdb0dbc44_639cca1386d2c75bdb0dbca5"
+}

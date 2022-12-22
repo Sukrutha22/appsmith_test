@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "insertData",
+    "pageId": "Client Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tinsert: ()=>{\n\t\tif (clientName.selectedOptionValue > 0){\n\t\t\tinsert_customer.run(()=>{\n\t\t\t\tfetch_customer.run(()=>{\n\t\t\t\t\tcloseModal('add_entry');\n\t\t\t\t\tshowAlert('Record Inserted Successfully!', 'success');\n\t\t\t\t})\n\t\t\t}, ()=>{\n\t\t\t\tshowAlert('Error Inserting Record', 'error');\n\t\t\t})\n\t\t} else {\n\t\t\tshowAlert('Please select Client Name','error');\n\t\t}\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Client Details_insertData",
+  "deleted": false,
+  "gitSyncId": "639c63b486d2c75bdb0dbc44_639fe6dea131b363b58187d9"
+}

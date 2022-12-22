@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "reset_page",
+    "pageId": "Client Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\t\n    update: () => {\t\n \t\t\t\t\tedit_customer.run(() => {\n          fetch_customer.run(() => {\n            closeModal('update_customer');\n            showAlert('Record Updated!', 'success');\n          })\n        }, () => {\n          showAlert('Error Updating Record', 'error');\n        })\n    }\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Client Details_reset_page",
+  "deleted": false,
+  "gitSyncId": "639c63b486d2c75bdb0dbc44_63a07a8fa131b363b58187fc"
+}

@@ -1,0 +1,16 @@
+{
+  "unpublishedCollection": {
+    "name": "get_addModal",
+    "pageId": "Client Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tgetModal: async () => {\n\t\tcust_master.run()\n\t\t.then(()=> pbm_master.run())\n\t\t.then(()=> storeValue('cust_id', undefined))\n\t\t.then(()=> resetWidget(\"add_entry\",true))\n\t\t.then(()=> showModal('add_entry'))\n\t\t.catch(()=> showAlert(\"Database connection timeout!!\",'error'))\n\t}\n}",
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Client Details_get_addModal",
+  "deleted": false,
+  "gitSyncId": "639c63b486d2c75bdb0dbc44_639cbc4086d2c75bdb0dbc9a"
+}
